@@ -1,0 +1,106 @@
+///////////////////////////////
+///////    PSEUDO CODING
+///////////////////////////////
+
+1. Declaring global variables
+
+2. Importing libraries and dependencies (currently absent)
+
+3. Functions and Code functionality
+
+4. Event listeners (currently absent)
+
+
+
+//GLOBAL VARIABLES:
+
+let bankAccount = 0;
+let toolUsed = "";
+
+const tool1 = "teeth"
+const tool2 = "scissors"
+
+const tool1Price = 0;
+const tool2Price = 5;
+
+const tool1Earnings = 1;
+const tool2Earnings = 5;
+
+let dayCount = 0;
+
+let time counter = 0;
+
+let youWon = false;
+
+//FUNCTIONS
+
+1.Won condition:
+    if bankAccount = 100 and tool2 is used, then youWon = true
+    if youWon = true, then clear everything and log "YOU WON! and exit
+
+2.Day count:
+    do you want to work today? Y/N 
+    if Y => check which tool is used and add to bankAccount + tool earnings for that tool. 
+    Log the new bankAccount value
+    if N => do nothing.
+
+3. Time counter:
+    Going to new day: time counter 10 seconds, then call up the day count function. 
+    Log what day it is from the beginning. 
+
+4. Upgrade tools:
+    if bankAccount => 5, then run "do you want to upgrade tools? Y/N
+    if Y => change tool1 to tool2. And profit counting from tool1Earnings to tool2Earnings.
+    if N => do nothing.
+
+
+//OPERATIONS SEQUENCE
+
+1. Declaring variables.
+1a. Log Greetings message and log initial variables.
+2. Start Time counter.
+    3. Passed 10 seconds run day count function (do you want to work today?). if Y =>
+    4. Run bankAccount update with message: You used ${tool} and earned ${profit}. 
+    5. Log new bankAccount value. 
+    6. Run upgrade tools function.
+    6a.Subtract tool2Price from bankAccount.
+    6b.Clear terminal and log new info from bankAccount and tool. 
+7. Run WON check.
+
+===================================================================
+
+DAY1
+BANK ACCOUNT $0
+YOUR TOOL "TEETH"
+*DO  YOU WANT TO WORK TODAY? * Y/N *
+Y
+YOU USED "TEETH" AND EARNED $1
+YOUR BANK ACCOUNT HAS $1
+
+...
+
+
+DAY5
+BANK ACCOUNT $10
+YOUR TOOL "TEETH"
+** YOU ARE ELIGIBLE FOR TOOL UPGRADE. Y/N **
+Y
+
+DAY5
+BANK ACCOUNT $0
+YOUR TOOL "SCISSORS"
+*DO  YOU WANT TO WORK TODAY? * Y/N *
+Y
+YOU USED "SCISSORS" AND EARNED $5
+YOUR BANK ACCOUNT HAS $5
+
+...
+
+DAY9
+BANK ACCOUNT $100
+YOUR TOOL "SCISSORS"
+***YOU WON!!!***
+
+
+
+

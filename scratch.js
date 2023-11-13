@@ -61,31 +61,30 @@ while (true) { // Running the work day logic
 
     case 2:
       // Executing code for "Upgrade tool"
-      console.log('You chose to upgrade your tool.');
-      // Exiting the loop
-      break;
+      console.log('*You chose to upgrade your tool.*');
+
+      ///// IMPLEMENTING UPGRADE TOOL LOGIC
+      if (currentTool === tools[0] && bankAccount >= 5) {
+        currentTool = tools[1];
+        bankAccount -= 5;
+      } else if (currentTool === tools[1] && bankAccount >= 25) {
+        currentTool = tools[2];
+        bankAccount -= 25;
+      } else if (currentTool === tools[2] && bankAccount >= 250) {
+        currentTool = tools[3];
+        bankAccount -= 250;
+      } else if (currentTool === tools[3] && bankAccount >= 500) {
+        currentTool = tools[4];
+        bankAccount -= 500;
+      } else {
+        console.log("**You don't have enough money to upgrade**");
+      }
+      break; //exiting the loop
 
     default:
       // Clearing the terminal and continuing to the next iteration of the loop for invalid choices
       console.clear();
       console.log("Invalid choice. Please choose 0, 1, or 2.");
       continue; // Continuing to the next iteration of the loop
-  }
-
-  ///// IMPLEMENTING UPGRADE TOOL LOGIC
-  if (currentTool === tools[0] && bankAccount >= 5) {
-    currentTool = tools[1];
-    bankAccount -= 5;
-  } else if (currentTool === tools[1] && bankAccount >= 25) {
-    currentTool = tools[2];
-    bankAccount -= 25;
-  } else if (currentTool === tools[2] && bankAccount >= 250) {
-    currentTool = tools[3];
-    bankAccount -= 250;
-  } else if (currentTool === tools[3] && bankAccount >= 500) {
-    currentTool = tools[4];
-    bankAccount -= 500;
-  } else {
-    console.log("**You don't have enough money to upgrade**");
   }
 }

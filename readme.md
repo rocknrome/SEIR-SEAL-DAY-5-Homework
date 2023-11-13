@@ -2,6 +2,8 @@
 
 # Landscaper
 
+**!!IMPORTANT!!** The game is made to work n Terminal only.
+
 ![studio ghibli landscape](https://peakmemory.files.wordpress.com/2014/06/cliufqx.jpg)
 
 You'll be creating a simple, browser-based JavaScript game that utilizes `alert()` and `prompt()` to send messages and receive input from the user.

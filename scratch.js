@@ -21,7 +21,7 @@ while (true) { // Running the work day logic
   /// Checking the WON condition:
   if (bankAccount >= 1000 && currentTool === tools[tools.length - 1]) {
     console.log("****************************************"); // Displaying congrats message
-    console.log("***Congratulations! You won the game!***");
+    console.log("** Congratulations! You won the game! **");
     console.log("****************************************");
     break; // Finishing up and exiting the game
   }
@@ -35,7 +35,7 @@ while (true) { // Running the work day logic
   switch (choice) { // Decided to use switch-case for my model
     // Logic for "work today"
     case 0:
-      console.log('You chose to work today.');
+      console.log('* You chose to work today *');
       // Executing code for "Work today"
       // Updating bank account based on the tool used
       if (currentTool === tools[0]) {
@@ -55,13 +55,13 @@ while (true) { // Running the work day logic
     case 1:
       // Clearing the terminal and restarting the initial while loop
       console.clear();
-      console.log('*You chose not to work yesterday.*');
+      console.log('* You chose not to work yesterday *');
       console.log('----------------------------------');
       break; // Implement break instead of `continue` to be able to use option 1 multiple times in a row.
 
     case 2:
       // Executing code for "Upgrade tool"
-      console.log('*You chose to upgrade your tool.*');
+      console.log('* You chose to upgrade your tool *');
 
       ///// IMPLEMENTING UPGRADE TOOL LOGIC
       if (currentTool === tools[0] && bankAccount >= 5) {
@@ -77,7 +77,7 @@ while (true) { // Running the work day logic
         currentTool = tools[4];
         bankAccount -= 500;
       } else {
-        console.log("**You don't have enough money to upgrade**");
+        console.log("** But you don't have enough money to upgrade **");
       }
       break; //exiting the loop
 

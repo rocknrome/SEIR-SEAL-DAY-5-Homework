@@ -1,0 +1,31 @@
+The logic and functionality of the program
+
+1. Start the program.
+2. Display the message "Do you want to work today?".
+3. Display the options:
+   - "0: Work today"
+   - "1: Do not work today"
+   - "2: Upgrade tool"
+4. Prompt the user for their choice.
+5. Use a switch statement to handle the user's choice:
+   - Case 0:
+     - Clear the terminal.
+     - Call the workToday() function to handle the work logic.
+     - Break out of the switch statement.
+   - Case 1:
+     - Clear the terminal.
+     - Display a message indicating that the user chose not to work today.
+     - Break out of the switch statement.
+   - Case 2:
+     - Clear the terminal.
+     - Display a message indicating that the user chose to upgrade their tool.
+     - Break out of the switch statement.
+   - Default:
+     - Clear the terminal.
+     - Display an "Invalid choice" message.
+6. Loop back to step 2 (start the process again).
+7. End the program.
+
+Function workToday():
+1. Implement the logic for working (e.g., earning money, updating variables).
+2. Display appropriate messages based on the work logic.

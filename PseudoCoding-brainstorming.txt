@@ -4,7 +4,7 @@
 
 1. Declaring global variables
 
-2. Importing libraries and dependencies (currently absent)
+2. Importing libraries and dependencies (readlineSync)
 
 3. Functions and Code functionality
 
@@ -26,32 +26,24 @@ const tool2Price = 5;
 const tool1Earnings = 1;
 const tool2Earnings = 5;
 
-let dayCount = 0;
-
-let time counter = 0;
-
 let youWon = false;
 
 //FUNCTIONS
 
 1.Won condition:
-    if bankAccount = 100 and tool2 is used, then youWon = true
+    if bankAccount = 100 and final tool is used, then youWon = true
     if youWon = true, then clear everything and log "YOU WON! and exit
 
-2.Day count:
-    do you want to work today? Y/N 
-    if Y => check which tool is used and add to bankAccount + tool earnings for that tool. 
-    Log the new bankAccount value
-    if N => do nothing.
+2. Run the day
+    Ask user if wants to work today.
+    Yes - run the day and update bank account.
+    No - do nothing, re-run the day logic again.
 
-3. Time counter:
-    Going to new day: time counter 10 seconds, then call up the day count function. 
-    Log what day it is from the beginning. 
 
-4. Upgrade tools:
-    if bankAccount => 5, then run "do you want to upgrade tools? Y/N
-    if Y => change tool1 to tool2. And profit counting from tool1Earnings to tool2Earnings.
-    if N => do nothing.
+3. Upgrade tools:
+    Ask user if wants to upgrade the tool.
+    Yes - update bank account and tool.
+    No - re-run the day logic.
 
 
 //OPERATIONS SEQUENCE
@@ -68,38 +60,16 @@ let youWon = false;
 7. Run WON check.
 
 ===================================================================
+ Visual template:
 
-DAY1
-BANK ACCOUNT $0
-YOUR TOOL "TEETH"
-*DO  YOU WANT TO WORK TODAY? * Y/N *
-Y
-YOU USED "TEETH" AND EARNED $1
-YOUR BANK ACCOUNT HAS $1
-
-...
+Do you want to work today?
+ 0: Work today
+ 1: Do not work today
+ 2: Upgrade tool
+Enter your choice:
 
 
-DAY5
-BANK ACCOUNT $10
-YOUR TOOL "TEETH"
-** YOU ARE ELIGIBLE FOR TOOL UPGRADE. Y/N **
-Y
 
-DAY5
-BANK ACCOUNT $0
-YOUR TOOL "SCISSORS"
-*DO  YOU WANT TO WORK TODAY? * Y/N *
-Y
-YOU USED "SCISSORS" AND EARNED $5
-YOUR BANK ACCOUNT HAS $5
-
-...
-
-DAY9
-BANK ACCOUNT $100
-YOUR TOOL "SCISSORS"
-***YOU WON!!!***
 
 
 
